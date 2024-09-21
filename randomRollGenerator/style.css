@@ -24,11 +24,11 @@ h1{
 
 }
 
-.playerDisplay, .computerDisplay{
-    font-size: 2rem;
+#playerDisplay, #computerDisplay{
+    font-size: 3rem;
 }
 
-.resultDisplay{
+#resultDisplay{
     font-size: 4rem;
     margin: 50px;
 }

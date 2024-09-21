@@ -15,10 +15,17 @@ function startGame() {
 
     if (playerRoll === computerRoll){
         result = "It's a tie!!!"
+        resultDisplay.style.color = "black";
     } else if (playerRoll > computerRoll){
         result = "Player wins!"
+        resultDisplay.style.color = "green";
     } else {
         result ="Computer wins!"
+        resultDisplay.style.color = "red";
+    }
+
+    if ( result === "Player wins!"){
+        
     }
 
     playerDisplay.textContent = `Player roll: ${playerRoll}`;
@@ -29,5 +36,3 @@ function startGame() {
 
 startButton.addEventListener('click', startGame);
 
-console.log(playerRoll);
-console.log(computerRoll);
