@@ -62,6 +62,10 @@ h3 {
     font-size: 1.5rem;
 }
 
+#userGreet {
+    font-size: 2rem;
+}
+
 #randomColor {
     margin-top: 50px;
     font-size: 2.5rem;
