@@ -6,7 +6,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: hsl(160, 90%, 47%);
+    /*background-color: hsl(160, 90%, 47%);*/
+    background-image: linear-gradient(to right, rgba(255,0,0,0), hsl(197, 81%, 42%));
     color: hsl(208, 84%, 30%);
 }
 
@@ -20,7 +21,7 @@ h3 {
 }
 
 .flex-container {
-    background-color: hsl(160, 90%, 67%);
+    background-image: linear-gradient(to right, rgba(255,0,0,0), hsl(197, 40%, 84%));
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -40,9 +41,37 @@ h3 {
     margin-top: 30px;
     font-size: 2.5rem;
     align-self: center;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), hsl(197, 81%, 62%));
+    border-radius: 40px;
+    padding: 8px;
+    transition: background-color 0.4s ease;
 }
+
+.flex-container button:hover {
+    background-color: hsl(199, 95%, 65%);
+}
+
 
 #resultDisplay {
     margin: 100px 100px;
     font-size: 2.5rem;
+}
+
+#gagDisplay {
+    margin: 100px 100px;
+    font-size: 1.5rem;
+}
+
+#randomColor {
+    margin-top: 50px;
+    font-size: 2.5rem;
+    align-self: center;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), hsl(197, 81%, 62%));
+    border-radius: 40px;
+    padding: 8px;
+    transition: background-color 0.4s ease;
+}
+
+#randomColor:hover{
+    background-color: hsl(199, 95%, 67%);
 }

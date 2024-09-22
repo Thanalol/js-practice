@@ -1,5 +1,8 @@
 const form = document.querySelector('.form');  
 const resultDisplay = document.getElementById('resultDisplay');  
+const gagDisplay = document.getElementById('gagDisplay');
+const changeColor = document.getElementById('changeColor');
+
 
 form.addEventListener('submit', function(event) {
     event.preventDefault();  
@@ -17,6 +20,13 @@ form.addEventListener('submit', function(event) {
 
   
     resultDisplay.textContent = message;
+
+    if(age >= 30){
+        gagDisplay.textContent = "Damn! You're fucking old."
+    } else {
+        gagDisplay.textContent = "Lucky! Still a few good years left!"
+    }
+
 
    
     form.reset();
