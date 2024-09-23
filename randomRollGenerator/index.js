@@ -59,9 +59,9 @@ function updateScore(result) {
 
 function resetGame(){
     
-    let playerWin = 0;
-    let computerWin = 0;
-    let tieWin = 0;
+    playerWin = 0;
+    computerWin = 0;
+    tieWin = 0;
 
     playerDisplay.textContent = ``;
     computerDisplay.textContent = ``;
