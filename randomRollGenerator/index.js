@@ -36,6 +36,23 @@ function startGame() {
     computerDisplay.textContent = `Computer roll: ${computerRoll}`;
     resultDisplay.textContent = result;
 
+function updateScore(result){
+
+    let playerWin = 0;
+    let computerWin = 0;
+    let tieWin = 0;
+
+    if (result === "player wins!"){
+        playerWin++;
+    } else if (result === "Computer wins!") {
+        computerWin++;
+    } else {
+        tieWin++;
+    }
+
+    playerScore.textContent
+
+}
 }
 
 startButton.addEventListener('click', startGame);
