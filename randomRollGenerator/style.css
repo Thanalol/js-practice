@@ -12,6 +12,11 @@ h1{
     font-size: 5rem;
 }
 
+.startGame {
+    display: flex;
+    flex-direction: column;
+}
+
 .startGame button {
     font-size: 3.5rem;
     margin: 40px 40px;
@@ -33,4 +38,14 @@ h1{
     font-size: 4rem;
     margin: 50px;
     background-color: hsl(0, 0%, 80%);
+}
+
+#scoreContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#playerScore, #computerScore, #tieScore {
+    font-size: 3rem;
 }

@@ -3,6 +3,10 @@ const playerDisplay = document.getElementById("playerDisplay");
 const computerDisplay = document.getElementById("computerDisplay");
 const resultDisplay = document.getElementById("resultDisplay");
 
+const playerScore = document.getElementById("playerScore");
+const computerScore = docuument.getElementById("computerScore");
+const tieScore = document.getElementById("tieScore");
+
 function getRandomNumber() {
     return Math.floor(Math.random()* 100) + 1;
 }
