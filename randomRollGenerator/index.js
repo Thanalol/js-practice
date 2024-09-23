@@ -1,11 +1,12 @@
 const startButton = document.getElementById("startBtn");
+const resetButton = document.getElementById("resetBtn");
 const playerDisplay = document.getElementById("playerDisplay");
 const computerDisplay = document.getElementById("computerDisplay");
 const resultDisplay = document.getElementById("resultDisplay");
 
-const playerScoreDisplay = document.getElementById("playerScore");
-const computerScoreDisplay = document.getElementById("computerScore");
-const tieScoreDisplay = document.getElementById("tieScore");
+const playerScore = document.getElementById("playerScore");
+const computerScore = document.getElementById("computerScore");
+const tieScore = document.getElementById("tieScore");
 
 
 let playerWin = 0;
@@ -51,9 +52,27 @@ function updateScore(result) {
     }
 
     
-    playerScoreDisplay.textContent = `You have ${playerWin} Points!`;
-    computerScoreDisplay.textContent = `Computer has ${computerWin} Points!`;
-    tieScoreDisplay.textContent = `Ties: ${tieWin}`;
+    playerScore.textContent = `You have ${playerWin} Points!`;
+    computerScore.textContent = `Computer has ${computerWin} Points!`;
+    tieScore.textContent = `Ties: ${tieWin}`;
+}
+
+function resetGame(){
+    
+    let playerWin = 0;
+    let computerWin = 0;
+    let tieWin = 0;
+
+    playerDisplay.textContent = ``;
+    computerDisplay.textContent = ``;
+    resultDisplay.textContent = ``;
+
+    playerScore.textContent = ``;
+    computerScore.textContent = ``;
+    tieScore.textContent = ``;
+
+
 }
 
 startButton.addEventListener('click', startGame);
+resetButton.addEventListener('click', resetGame);
