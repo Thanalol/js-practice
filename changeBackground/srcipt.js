@@ -9,3 +9,15 @@ function applyChangeColor(color) {
     document.body.style.backgroundColor = settings.backgroundColor;
     document.body.style.color = settings.fontColor;
 }
+
+document.getElementById('red').addEventListener('click', function(){
+    applyChangeColor('red');
+});
+
+document.getElementById('blue').addEventListener('click', function(){
+    applyChangeColor('blue');
+});
+
+document.getElementById('green').addEventListener('click', function(){
+    applyChangeColor('green');
+});
