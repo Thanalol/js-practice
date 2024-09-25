@@ -30,7 +30,13 @@ function pauseTimer() {
     startButton.disabled = false; 
 }
 
-
+function resetTimer() {
+    clearInterval(timerInterval);
+    elapsedTime = 0;
+    timeDisplay.textContent = "00:00:00";
+    startButton.disabled = false; // Ensure the start button is enabled
+}
 
 startButton.addEventListener('click', startTimer);
 pauseButton.addEventListener('click', pauseTimer);
+resetButton.addEventListener('click', resetTimer);
