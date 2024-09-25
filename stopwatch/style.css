@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: hsl(199, 100%, 40%);
+}
+
+h1{
+    font-size: 5rem;
+    text-align: center;
+    color: white;
+}
+
+span{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.interface{
+    display: flex;
+    flex: 1;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.interface button{
+    font-size: 2rem;
+    border-radius: 40px;
+    border: none;
+    background-color: hsl(180, 100%, 70%);
+    transition: background-color 0.4s ease;
+    cursor: pointer;
+}
+
+.interface button:hover{
+    background-color: hsl(180, 100%, 90%);
+}
