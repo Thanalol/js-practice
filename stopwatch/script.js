@@ -7,6 +7,15 @@ let startTime = 0;
 let elapsedTime = 0;
 let timerInterval;
 
+function timeToString(time) {
+    let date = new Date(time);
+    let hours = date.getUTCHours().toString().padStart(2, '0');
+    let minutes = date.getUTCMinutes().toString().padStart(2, '0');
+    let seconds = date.getUTCSeconds().toString().padStart(2, '0');
+    
+    return `${hours}:${minutes}:${seconds}`;
+}
+
 function startTimer() {
     startTime = Date.now() - elapsedTime;
     timerInterval = setInterval(() => {
@@ -16,5 +25,12 @@ function startTimer() {
     startButton.disabled = true;  
 }
 
+function pauseTimer() {
+    clearInterval(timerInterval);
+    startButton.disabled = false; 
+}
+
+
 
 startButton.addEventListener('click', startTimer);
+pauseButton.addEventListener('click', pauseTimer);
