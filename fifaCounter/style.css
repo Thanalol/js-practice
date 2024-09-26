@@ -31,12 +31,12 @@ h2 {
     flex-direction: column;
     align-items: center;
     padding: 2rem;
-    
+    height: 100%;
     box-sizing: border-box;
 }
 
 
-#playerOnePoints, #playerTwoPoints{
+#playerOneButton, #playerTwoButton{
     margin-top: 3rem;
     background-color: hsl(197, 100%, 60%);
     font-size: 1.5rem;
@@ -45,11 +45,11 @@ h2 {
     border-style: hidden;
     cursor: pointer;
     transition: background-color 0.5s ease;
+    box-sizing: border-box;
 }
 
-#playerOnePoints:hover, #playerTwoPoints:hover{
+#playerOneButton:hover, #playerTwoButton:hover{
     background-color: hsl(197, 100%, 80%);
-    border-style: double
 }
 
 #playerOneDisplay, #playerTwoDisplay{
