@@ -3,12 +3,19 @@ body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
     color: hsl(0, 0%, 20%);
+    background-color: hsl(60, 56%, 98%);
 }
 
 h1 {
     font-size: 6rem;
     text-align: center;
     text-decoration: underline;
+}
+
+h2 {
+    font-size: 3rem;
+    text-align: center;
+    color: hsl(0, 0%, 50%);
 }
 
 .players{
@@ -24,10 +31,28 @@ h1 {
     flex-direction: column;
     align-items: center;
     padding: 2rem;
-    height: 100%;
+    
     box-sizing: border-box;
 }
 
+
 #playerOnePoints, #playerTwoPoints{
-    margin-top: 1rem;
+    margin-top: 3rem;
+    background-color: hsl(197, 100%, 60%);
+    font-size: 1.5rem;
+    border-radius: 45px;
+    padding: 12px;
+    border-style: hidden;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+#playerOnePoints:hover, #playerTwoPoints:hover{
+    background-color: hsl(197, 100%, 80%);
+    border-style: double
+}
+
+#playerOneDisplay, #playerTwoDisplay{
+    font-size: 3rem;
+    color: black;
 }
