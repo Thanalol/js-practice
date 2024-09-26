@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color: hsl(0, 0%, 20%);
+}
+
+h1 {
+    font-size: 6rem;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.players{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+#playerOne, #playerTwo{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+#playerOnePoints, #playerTwoPoints{
+    margin-top: 1rem;
+}
