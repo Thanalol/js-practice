@@ -17,5 +17,13 @@ function addPointTwo(){
     playerTwoDisplay.textContent = playerTwoScore;
 }
 
+function resetScore(){
+    playerOneScore = 0;
+    playerTwoScore = 0;
+    playerOneDisplay.textContent = playerOneScore;
+    playerTwoDisplay.textContent = playerTwoScore;
+}
+
 playerOneButton.addEventListener("click", addPointOne);
 playerTwoButton.addEventListener("click", addPointTwo);
+resetButton.addEventListener("click", resetScore);
