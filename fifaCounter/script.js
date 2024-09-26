@@ -2,6 +2,7 @@ const playerOneButton = document.getElementById("playerOneButton");
 const playerTwoButton = document.getElementById("playerTwoButton");
 const playerOneDisplay = document.getElementById("playerOneDisplay");
 const playerTwoDisplay = document.getElementById("playerTwoDisplay");
+const resetButton = document.getElementById("resetButton");
 
 let playerOneScore = 0;
 let playerTwoScore = 0;
