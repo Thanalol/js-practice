@@ -6,7 +6,6 @@ const resetButton = document.getElementById("resetButton");
 const playerOneDisplay = document.getElementById("playerOneDisplay");
 const playerTwoDisplay = document.getElementById("playerTwoDisplay");
 
-
 //Variables to keep track of the score. 
 let playerOneScore = 0;
 let playerTwoScore = 0;
