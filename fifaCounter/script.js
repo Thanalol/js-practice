@@ -15,9 +15,16 @@ const playerTwoName = document.getElementById("playerTwoName");
 const playerOnePrompt = document.getElementById("playerOnePrompt");
 const playerTwoPrompt = document.getElementById("playerTwoPrompt");
 
+//Live update declaration
+const announceScore = document.getElementById("announceScore");
+
 // Variables to keep track of the score
 let playerOneScore = 0;
 let playerTwoScore = 0;
+
+//Store the players Usernames
+let playerOneUsername = "";
+let playerTwoUsername = "";
 
 // Function to ask for the players' usernames and hide the prompt buttons
 function askUsername(player) {
@@ -26,12 +33,14 @@ function askUsername(player) {
         const userName = prompt("Please enter Player One's name:");
         if (userName) {
             playerOneName.textContent = `${userName}'s score:`;
+            playerOneUsername = userName;
             playerOnePrompt.style.display = "none";
         }
     } else if (player === 2) {
         const userName = prompt("Please enter Player Two's name:");
         if (userName) {
             playerTwoName.textContent = `${userName}'s score:`;
+            playerTwoUsername = userName;
             playerTwoPrompt.style.display = "none";
         }
     }
@@ -42,6 +51,7 @@ function addPointOne() {
     playerOneScore++;
     playerOneDisplay.textContent = playerOneScore;
     updateColors();
+    liveUpdate();
 }
 
 // Adds points to Player Two's score
@@ -49,6 +59,7 @@ function addPointTwo() {
     playerTwoScore++;
     playerTwoDisplay.textContent = playerTwoScore;
     updateColors();
+    liveUpdate();
 }
 
 // Function to change color depending on who is in the lead
@@ -65,6 +76,19 @@ function updateColors() {
     }
 }
 
+//Function for a score live update
+function liveUpdate(){
+
+    if (playerOneScore == playerTwoScore) {
+        announceScore.textContent = "The score is tied!"; 
+    } else if(playerOneScore > playerTwoScore) {
+        announceScore.textContent = `${playerOneUsername} is in the lead!`;
+    } else {
+        announceScore.textContent = `${playerTwoUsername} is in the lead!`;
+    }
+
+}
+
 // Reset button function
 function resetScore() {
 
@@ -79,6 +103,11 @@ function resetScore() {
 
     playerOnePrompt.style.display = 'inline-block';
     playerTwoPrompt.style.display = 'inline-block';
+
+    playerOneUsername = "";
+    playerTwoUsername = "";
+
+    announceScore.textContent = "";
 
     updateColors();
 }
