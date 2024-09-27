@@ -3,7 +3,7 @@ body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
     color: hsl(0, 0%, 20%);
-    background-color: hsl(60, 56%, 98%);
+    background-color: hsl(60, 11%, 50%);
 }
 
 h1 {
@@ -23,6 +23,14 @@ h2 {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+}
+
+#playerOne{
+    background-color: hsl(0, 0%, 50%);
+}
+
+#playerTwo{
+    background-color: hsl(0, 0%, 60%);
 }
 
 #playerOne, #playerTwo{
@@ -90,6 +98,12 @@ h2 {
 #playerOneDisplay, #playerTwoDisplay{
     font-size: 3rem;
     color: black;
+}
+
+#announceScore{
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 3rem;
 }
 
 .resetButton{
