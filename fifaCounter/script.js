@@ -1,74 +1,88 @@
-//Button declarations.
+// Button declarations
 const playerOneButton = document.getElementById("playerOneButton");
 const playerTwoButton = document.getElementById("playerTwoButton");
 const resetButton = document.getElementById("resetButton");
-//Result display declarations.
+
+// Result display declarations
 const playerOneDisplay = document.getElementById("playerOneDisplay");
 const playerTwoDisplay = document.getElementById("playerTwoDisplay");
-//Name display declarations
+
+// Name display declarations
 const playerOneName = document.getElementById("playerOneName");
 const playerTwoName = document.getElementById("playerTwoName");
-//Prompt button declarations
+
+// Prompt button declarations
 const playerOnePrompt = document.getElementById("playerOnePrompt");
 const playerTwoPrompt = document.getElementById("playerTwoPrompt");
 
-
-//Variables to keep track of the score. 
+// Variables to keep track of the score
 let playerOneScore = 0;
 let playerTwoScore = 0;
 
-//Functio to ask for the players username and hide the prompt buttons.
-function askUsername(){
-    const userName = prompt("Please enter Player One's name:");
-    if (userName) {
-        playerOneName.textContent = `${userName} score:`
-        playerOnePrompt.style.display = "none";
+// Function to ask for the players' usernames and hide the prompt buttons
+function askUsername(player) {
+    if (player === 1) {
+        const userName = prompt("Please enter Player One's name:");
+        if (userName) {
+            playerOneName.textContent = `${userName}'s score:`;
+            playerOnePrompt.style.display = "none";
+        }
     } else if (player === 2) {
-        playerTwoName.textContent = `${userName} score:`
-        playerTwoPrompt.style.display = "none";
+        const userName = prompt("Please enter Player Two's name:");
+        if (userName) {
+            playerTwoName.textContent = `${userName}'s score:`;
+            playerTwoPrompt.style.display = "none";
+        }
     }
 }
 
-//Adds points to the first player's score. 
-function addPointOne(){
+// Adds points to Player One's score
+function addPointOne() {
     playerOneScore++;
     playerOneDisplay.textContent = playerOneScore;
     updateColors();
 }
 
-//Adds points to the second player's score. 
-function addPointTwo(){
+// Adds points to Player Two's score
+function addPointTwo() {
     playerTwoScore++;
     playerTwoDisplay.textContent = playerTwoScore;
     updateColors();
 }
 
-//If function to change color depending on who is in the lead.
-function updateColors(){
-    if (playerOneScore === playerTwoScore){
+// Function to change color depending on who is in the lead
+function updateColors() {
+    if (playerOneScore === playerTwoScore) {
         playerOneDisplay.style.color = "black";
         playerTwoDisplay.style.color = "black";
-    } else if (playerOneScore > playerTwoScore){
+    } else if (playerOneScore > playerTwoScore) {
         playerOneDisplay.style.color = "green";
         playerTwoDisplay.style.color = "red";
     } else {
         playerOneDisplay.style.color = "red";
         playerTwoDisplay.style.color = "green";
-        }
+    }
 }
 
-//Reset button function.
-function resetScore(){
+// Reset button function
+function resetScore() {
+
     playerOneScore = 0;
     playerTwoScore = 0;
+
     playerOneDisplay.textContent = playerOneScore;
     playerTwoDisplay.textContent = playerTwoScore;
+
+    playerOneName.textContent = "";
+    playerTwoName.textContent = "";
+
+    playerOnePrompt.style.display = 'inline-block';
+    playerTwoPrompt.style.display = 'inline-block';
+
     updateColors();
 }
 
-//Even listener for player one. 
+// Event listeners
 playerOneButton.addEventListener("click", addPointOne);
-//Event listener for player two.
 playerTwoButton.addEventListener("click", addPointTwo);
-//Event listener reset button.
 resetButton.addEventListener("click", resetScore);
