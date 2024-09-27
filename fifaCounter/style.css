@@ -35,10 +35,45 @@ h2 {
     box-sizing: border-box;
 }
 
-
-#playerOneButton, #playerTwoButton{
+#playerOnePrompt{
     margin-top: 3rem;
     background-color: hsl(197, 100%, 60%);
+    font-size: 1.5rem;
+    border-radius: 45px;
+    padding: 12px;
+    border-style: hidden;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    box-sizing: border-box;
+}
+
+#playerTwoPrompt{
+    margin-top: 3rem;
+    background-color: hsl(157, 86%, 43%);
+    font-size: 1.5rem;
+    border-radius: 45px;
+    padding: 12px;
+    border-style: hidden;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    box-sizing: border-box;
+}
+
+#playerOneButton{
+    margin-top: 3rem;
+    background-color: hsl(197, 100%, 60%);
+    font-size: 1.5rem;
+    border-radius: 45px;
+    padding: 12px;
+    border-style: hidden;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    box-sizing: border-box;
+}
+
+#playerTwoButton{
+    margin-top: 3rem;
+    background-color: hsl(157, 86%, 43%);
     font-size: 1.5rem;
     border-radius: 45px;
     padding: 12px;
