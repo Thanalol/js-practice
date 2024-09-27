@@ -21,6 +21,7 @@ let playerTwoScore = 0;
 
 // Function to ask for the players' usernames and hide the prompt buttons
 function askUsername(player) {
+    
     if (player === 1) {
         const userName = prompt("Please enter Player One's name:");
         if (userName) {
