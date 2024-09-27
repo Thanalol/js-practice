@@ -5,10 +5,29 @@ const resetButton = document.getElementById("resetButton");
 //Result display declarations.
 const playerOneDisplay = document.getElementById("playerOneDisplay");
 const playerTwoDisplay = document.getElementById("playerTwoDisplay");
+//Name display declarations
+const playerOneName = document.getElementById("playerOneName");
+const playerTwoName = document.getElementById("playerTwoName");
+//Prompt button declarations
+const playerOnePrompt = document.getElementById("playerOnePrompt");
+const playerTwoPrompt = document.getElementById("playerTwoPrompt");
+
 
 //Variables to keep track of the score. 
 let playerOneScore = 0;
 let playerTwoScore = 0;
+
+//Functio to ask for the players username and hide the prompt buttons.
+function askUsername(){
+    const userName = prompt("Please enter Player One's name:");
+    if (userName) {
+        playerOneName.textContent = `${userName} score:`
+        playerOnePrompt.style.display = "none";
+    } else if (player === 2) {
+        playerTwoName.textContent = `${userName} score:`
+        playerTwoPrompt.style.display = "none";
+    }
+}
 
 //Adds points to the first player's score. 
 function addPointOne(){
