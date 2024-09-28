@@ -117,6 +117,11 @@ function resetScore() {
 
     announceScore.textContent = "";
 
+    playerOneDisplay.classList.add('hidden');
+    playerOneButton.classList.add('hidden');
+    playerTwoDisplay.classList.add('hidden');
+    playerTwoButton.classList.add('hidden');
+
     updateColors();
 }
 
