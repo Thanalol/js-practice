@@ -34,6 +34,10 @@ function askUsername(player) {
             playerOneName.textContent = `${userName}'s score:`;
             playerOneUsername = userName;
             playerOnePrompt.style.display = "none";
+
+            //Show Player One's score and button. 
+            playerOneDisplay.classList.remove('hidden');
+            playerOneButton.classList.remove('hidden');
         }
     } else if (player === 2) {
         const userName = prompt("Please enter Player Two's name:");
@@ -41,6 +45,10 @@ function askUsername(player) {
             playerTwoName.textContent = `${userName}'s score:`;
             playerTwoUsername = userName;
             playerTwoPrompt.style.display = "none";
+
+             //Show Player Two's score and button. 
+             playerTwoDisplay.classList.remove('hidden');
+             playerTwoButton.classList.remove('hidden');
         }
     }
 }
