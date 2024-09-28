@@ -1,0 +1,134 @@
+/* Reset default browser styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Title at the top */
+h1 {
+    font-size: 8rem;
+    color: #fff;
+    margin-top: 5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Layout for player boxes */
+.players {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px; /* Spacing between the two player boxes */
+    width: 100%;
+    max-width: 900px; /* Limit the max width to make sure it fits on the screen */
+    margin-bottom: 20px; /* Space between the player section and the live update */
+}
+
+/* Individual player box */
+#playerOne, #playerTwo {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 45%; /* Each player box takes up 45% of the available width */
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+#playerOne:hover, #playerTwo:hover {
+    transform: translateY(-10px);
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #ffedbc;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Score display */
+#playerOneDisplay, #playerTwoDisplay {
+    font-size: 4rem;
+    margin: 20px 0;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+button {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #43e97b, #38f9d7);
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #38f9d7, #43e97b);
+    transform: translateY(-5px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Live update section below the player boxes */
+#announceScore {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 40px;
+    text-align: center;
+    min-height: 40px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Reset button at the bottom */
+.resetButton {
+    text-align: center;
+}
+
+.resetButton button {
+    background: linear-gradient(135deg, #f64f59, #c471ed);
+    padding: 12px 50px;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.resetButton button:hover {
+    background: linear-gradient(135deg, #c471ed, #f64f59);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .players {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    #playerOne, #playerTwo {
+        width: 100%;
+        max-width: 400px;
+    }
+}
