@@ -15,20 +15,19 @@ const playerTwoName = document.getElementById("playerTwoName");
 const playerOnePrompt = document.getElementById("playerOnePrompt");
 const playerTwoPrompt = document.getElementById("playerTwoPrompt");
 
-//Live update declaration
+// Live update declaration
 const announceScore = document.getElementById("announceScore");
 
 // Variables to keep track of the score
 let playerOneScore = 0;
 let playerTwoScore = 0;
 
-//Store the players Usernames
+// Store the players' Usernames
 let playerOneUsername = "";
 let playerTwoUsername = "";
 
 // Function to ask for the players' usernames and hide the prompt buttons
 function askUsername(player) {
-    
     if (player === 1) {
         const userName = prompt("Please enter Player One's name:");
         if (userName) {
@@ -76,22 +75,23 @@ function updateColors() {
     }
 }
 
-//Function for a score live update
-function liveUpdate(){
+// Function for a score live update
+function liveUpdate() {
+    // Use default names if usernames are not set
+    const playerOneNameToDisplay = playerOneUsername || "Player One";
+    const playerTwoNameToDisplay = playerTwoUsername || "Player Two";
 
-    if (playerOneScore == playerTwoScore) {
-        announceScore.textContent = "The score is tied!"; 
-    } else if(playerOneScore > playerTwoScore) {
-        announceScore.textContent = `${playerOneUsername} is in the lead!`;
+    if (playerOneScore === playerTwoScore) {
+        announceScore.textContent = "The score is tied!";
+    } else if (playerOneScore > playerTwoScore) {
+        announceScore.textContent = `${playerOneNameToDisplay} is in the lead!`;
     } else {
-        announceScore.textContent = `${playerTwoUsername} is in the lead!`;
+        announceScore.textContent = `${playerTwoNameToDisplay} is in the lead!`;
     }
-
 }
 
 // Reset button function
 function resetScore() {
-
     playerOneScore = 0;
     playerTwoScore = 0;
 
@@ -101,8 +101,8 @@ function resetScore() {
     playerOneName.textContent = "";
     playerTwoName.textContent = "";
 
-    playerOnePrompt.style.display = 'inline-block';
-    playerTwoPrompt.style.display = 'inline-block';
+    playerOnePrompt.style.display = "inline-block";
+    playerTwoPrompt.style.display = "inline-block";
 
     playerOneUsername = "";
     playerTwoUsername = "";
