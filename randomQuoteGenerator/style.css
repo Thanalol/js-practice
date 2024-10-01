@@ -1,6 +1,8 @@
 body{
     margin: 0;
-    background-color: hsl(160, 100%, 75%);
+    background-color: hsl(71, 100%, 75%);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 h1{
@@ -22,7 +24,14 @@ button{
     margin-bottom: 20px;
     cursor: pointer;
     border: none;
-    background-color: hsl(200, 100%, 50%);
+    background-color: hsl(24, 100%, 50%);
     color: white;
     border-radius: 5px;
+}
+
+#quoteDisplay{
+    font-size: 3rem;
+    margin-top: 200px;
+    color: hsl(0, 0%, 30%);
+
 }
