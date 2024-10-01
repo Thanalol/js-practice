@@ -24,9 +24,16 @@ button{
     margin-bottom: 20px;
     cursor: pointer;
     border: none;
-    background-color: hsl(24, 100%, 50%);
+    margin-top: 100px;
+    background-color: hsl(32, 85%, 39%);
     color: white;
     border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+
+}
+
+button:hover{
+    background-color: hsl(32, 85%, 59%);
 }
 
 #quoteDisplay {
@@ -42,4 +49,9 @@ button{
     margin-left: auto; 
     margin-right: auto; 
     display: none;
+    cursor: pointer;
+}
+
+#quoteDisplay:hover{
+    background-color: hsl(0, 0%, 80%);
 }
